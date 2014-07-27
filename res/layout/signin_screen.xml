@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightPurple" >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDriver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="80dp"
+        android:orientation="vertical" >
+
+        <EditText
+            android:id="@+id/usernameEditText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:background="@color/White"
+            android:hint="username@yahoo-inc.com"
+            android:inputType="textEmailAddress"
+            android:padding="5dp" >
+
+            <requestFocus />
+        </EditText>
+
+        <EditText
+            android:id="@+id/pswdEditText"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@color/White"
+            android:ems="10"
+            android:inputType="textPassword"
+            android:padding="5dp" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/button1"
+        style="@style/btnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutDriver"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/btn_bckground"
+        android:onClick="validate_login"
+        android:text="@string/sign_in" />
+
+</RelativeLayout>

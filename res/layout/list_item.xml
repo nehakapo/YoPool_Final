@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linearLayoutDriver"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentLeft="false"
+    android:layout_alignParentTop="false"
+    android:layout_marginTop="8dp"
+    android:background="@color/LightPurple"
+    android:orientation="horizontal"
+    android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/profilePicView"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ramya_pic" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nameTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Ramya Balaraman"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/DarkPurple"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/pickupLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="@string/pickup_time"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/DarkPurple"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+            
+             <TextView
+                 android:id="@+id/value"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:layout_marginLeft="5dp"
+                 android:layout_marginTop="2dp"
+                 android:text="09:15 am"
+                 android:textAppearance="?android:attr/textAppearanceMedium"
+                 android:textColor="@color/DarkPurple"
+                 android:textSize="18sp"
+                 android:textStyle="bold"
+                 android:typeface="normal" />
+
+        </LinearLayout>
+    
+
+</LinearLayout>
