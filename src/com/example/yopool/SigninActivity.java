@@ -67,7 +67,7 @@ public class SigninActivity extends Activity {
 			boolean isDriver = Profile.isDriver();
 			
 			if (isDriver) {
-				Intent intent = new Intent(context,DriverDialogFragment.class);
+				Intent intent = new Intent(context,DriverDashboard.class);
 				startActivity(intent);
 			} else {
 				Intent intent = new Intent(context,MapActivity.class);

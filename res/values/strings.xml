@@ -33,7 +33,9 @@
     <string name="license_no">License No</string>
     <string name="pickup_time">Pickup Time: </string>
     <string name="save">Save </string>
-    <string name="title_activity_driver_list">Driver\'s List</string>
+    <string name="title_activity_driver_list">Yo!Driver List</string>
     <string name="title_activity_driver_details">Driver Details</string>
-    
+    <string name="title_activity_driver_dashboard">Driver Dashboard</string>
+    <string name="title_activity_passenger_list">Yo!Rider List</string>
+
 </resources>

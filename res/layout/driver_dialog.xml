@@ -1,44 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="fill_parent"
-    android:layout_height="fill_parent" 
-    android:background="@color/LightPurple">
+    android:layout_height="fill_parent"
+    android:background="@color/LightPurple"
+    android:padding="10dp" >
 
     <TextView
         android:id="@+id/textView1"
+        style="@style/textStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="34dp"
+        android:layout_marginTop="10dp"
         android:text="@string/display_message"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/DarkPurple"
         android:textStyle="bold" />
-
-    <Button
-        android:id="@+id/button3"
-        style="@style/btnStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button2"
-        android:layout_alignBottom="@+id/button2"
-        android:layout_alignParentLeft="true"
-        android:layout_marginLeft="30dp"
-        android:background="@drawable/btn_bckground"
-        android:text="@string/confirm" />
-
-    <Button
-        android:id="@+id/button2"
-        style="@style/btnStyle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginBottom="40dp"
-        android:layout_marginRight="28dp"
-        android:background="@drawable/btn_bckground"
-        android:text="@string/not_today" />
 
     <AnalogClock
         android:id="@+id/analogClock1"
@@ -46,7 +24,31 @@
         android:layout_height="200dp"
         android:layout_below="@+id/textView1"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
-        android:background="@color/DarkPurple" />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/clock_bck"/>
+
+    <Button
+        android:id="@+id/confirmBtn"
+        style="@style/btnStyle"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@id/analogClock1"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bckground"
+        android:padding="5dp"
+        android:text="@string/confirm" />
+
+    <Button
+        android:id="@+id/notTodayBtn"
+        style="@style/btnStyle"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/analogClock1"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/btn_bckground"
+        android:padding="5dp"
+        android:text="@string/not_today" />
 
 </RelativeLayout>

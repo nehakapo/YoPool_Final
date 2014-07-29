@@ -7,7 +7,8 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
-    
+    <uses-permission android:name="android.permission.SEND_SMS" />
+
     <!--
      The following two permissions are not required to use
      Google Maps Android API v2, but are recommended.
@@ -20,8 +21,8 @@
         android:required="true" />
 
     <uses-sdk
-        android:minSdkVersion="14"
-        android:targetSdkVersion="21" />
+        android:minSdkVersion="16"
+        android:targetSdkVersion="19" />
 
     <application
         android:allowBackup="true"
@@ -38,13 +39,13 @@
             </intent-filter>
         </activity>
 
-
         <meta-data
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
         <meta-data
             android:name="com.google.android.maps.v2.API_KEY"
             android:value="AIzaSyCK6VT1cpb1yKyXFatQA6Mw6gCsFL4fdl8" />
+
         <activity
             android:name=".MapActivity"
             android:label="@string/title_activity_map" >
@@ -61,22 +62,30 @@
             android:name=".ProfileActivity"
             android:label="@string/title_activity_profile" >
         </activity>
-        
         <activity
             android:name=".ListActivity"
             android:label="@string/title_activity_list" >
         </activity>
-         <activity
+        <activity
             android:name=".DriverDialogFragment"
-            android:label="@string/title_activity_driverdialog" >
+            android:label="@string/title_activity_driverdialog"
+            android:theme="@android:style/Theme.Dialog" >
         </activity>
-         <activity
+        <activity
             android:name=".DriverList"
             android:label="@string/title_activity_driver_list" >
         </activity>
         <activity
             android:name=".DriverDetails"
             android:label="@string/title_activity_driver_details" >
+        </activity>
+        <activity
+            android:name=".DriverDashboard"
+            android:label="@string/title_activity_driver_dashboard" >
+        </activity>
+        <activity
+            android:name=".PassengerList"
+            android:label="@string/title_activity_passenger_list" >
         </activity>
     </application>
 

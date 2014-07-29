@@ -9,10 +9,12 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
+import android.telephony.SmsManager;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class DriverDetails extends Activity {
 	private Context context;
@@ -45,14 +47,29 @@ public class DriverDetails extends Activity {
 		ArrayList<String> models = AvailableDrivers.getCar_models();
 		ArrayList<String> licenses = AvailableDrivers.getLicense_nos();
 		ArrayList<String> pics = AvailableDrivers.getPic_urls();
+		ArrayList<String> phnos = AvailableDrivers.getPhnos();
 
 		name.setText(names.get(selectedIndex));
 		pickup.setText(pickups.get(selectedIndex));
 		carModel.setText(models.get(selectedIndex));
 		license.setText(licenses.get(selectedIndex));
 		
+		try {
+			SmsManager smsManager = SmsManager.getDefault();
+			smsManager.sendTextMessage(phnos.get(selectedIndex), null, Profile.getName()+ " has requested you for a Yo!Ride\nAddress: "+Profile.getHomeAddr() , null, null);
+			Toast.makeText(getApplicationContext(), "Yo!Driver "+ names.get(selectedIndex)+" has been notified!",
+			Toast.LENGTH_LONG).show();
+			} catch (Exception e) {
+			Toast.makeText(getApplicationContext(),
+			"SMS failed, please try again later!",
+			Toast.LENGTH_LONG).show();
+			e.printStackTrace();
+			}
+		
 		int id = context.getResources().getIdentifier(pics.get(selectedIndex), "drawable", context.getPackageName());
 		pic.setImageResource(id);
+		
+		
 	}
 
 	@Override
@@ -70,6 +87,10 @@ public class DriverDetails extends Activity {
 		int id = item.getItemId();
 		if (id == R.id.action_profile) {
 			Intent intent = new Intent(context, ProfileActivity.class);
+			startActivity(intent);
+			return true;
+		}if (id == R.id.action_notifications) {
+			Intent intent = new Intent(getApplicationContext(),PassengerList.class);
 			startActivity(intent);
 			return true;
 		}

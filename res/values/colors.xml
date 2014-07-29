@@ -4,5 +4,6 @@
     <color name="Grey">#999999</color>
     <color name="DarkPurple">#1B013B</color>
     <color name="White">#FFFFFF</color>
+    <color name="LightGrey">#EFEFEF</color>
     
 </resources>

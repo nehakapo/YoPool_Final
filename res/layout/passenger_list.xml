@@ -1,0 +1,83 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/LightPurple"
+    android:padding="5dp"
+    tools:context="com.example.yopool.PassengerList" >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutDriver"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:background="@color/LightGrey"
+        android:orientation="horizontal"
+        android:padding="10dp" >
+
+        <ImageView
+            android:id="@+id/profilePicView"
+            android:layout_width="100dp"
+            android:layout_height="80dp"
+            android:src="@drawable/nkapoor_pic" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical" >
+
+            <TextView
+                android:id="@+id/nameTextView"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:text="Neha Kapoor"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/DarkPurple"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/phLabel"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:text="Pickup Address"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/DarkPurple"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+
+            <TextView
+                android:id="@+id/value"
+                style="@style/textStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text="718 Old San francisco Road, Sunnyvale"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/DarkPurple"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:typeface="normal" />
+        </LinearLayout>
+    </LinearLayout>
+
+       <Button
+        android:id="@+id/button1"
+        style="@style/btnStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayoutDriver"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/btn_bckground"
+        android:onClick="route"
+        android:text="Route" />
+</RelativeLayout>

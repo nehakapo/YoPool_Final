@@ -192,10 +192,16 @@ public class MapActivity extends android.support.v4.app.FragmentActivity impleme
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_map);
         
-        AutoCompleteTextView autoCompView = (AutoCompleteTextView) findViewById(R.id.editText1);
+        AutoCompleteTextView autoCompView = (AutoCompleteTextView) findViewById(R.id.pickUpLocationText);
         autoCompView.setAdapter(new PlacesAutoCompleteAdapter(this, R.layout.auto_list_item));
         autoCompView.setOnItemClickListener(this);
-        edit_text = (EditText)findViewById(R.id.editText1);
+        edit_text = autoCompView;
+        
+        edit_text.setText(Profile.getHomeAddr());
+        
+        address = edit_text.getText().toString();
+        setUpMapIfNeeded();
+        GetPickupLocation();
         
         edit_text.setImeOptions(EditorInfo.IME_ACTION_DONE);
         

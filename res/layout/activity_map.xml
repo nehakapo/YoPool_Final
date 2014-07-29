@@ -22,13 +22,14 @@
     android:background="@color/LightPurple" >
 
      <AutoCompleteTextView
-        android:id="@+id/editText1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="@string/pickup_location"
-        android:imeOptions="actionDone"
-        android:singleLine="true" >
+         android:id="@+id/pickUpLocationText"
+         style="@style/textStyle"
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content"
+         android:ems="10"
+         android:hint="@string/pickup_location"
+         android:imeOptions="actionDone"
+         android:singleLine="true" >
 
         <requestFocus />
    
@@ -45,8 +46,9 @@
     <Button
         android:id="@+id/button1"
         style="@style/btnStyle"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="320dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
         android:background="@drawable/btn_bckground"
         android:onClick="request_ride"
         android:text="@string/requestRide" />
