@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.yopool"
+    package="com.yahoo.android.yopool"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -8,6 +8,9 @@
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.SEND_SMS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" >
+    </uses-permission>
 
     <!--
      The following two permissions are not required to use
@@ -30,7 +33,7 @@
         android:label="@string/app_name"
         android:theme="@style/CustomTheme" >
         <activity
-            android:name=".SplashScreen"
+            android:name="com.yahoo.android.yopool.activity.SplashScreen"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -47,46 +50,61 @@
             android:value="AIzaSyCK6VT1cpb1yKyXFatQA6Mw6gCsFL4fdl8" />
 
         <activity
-            android:name=".MapActivity"
+            android:name="com.yahoo.android.yopool.activity.MapActivity"
             android:label="@string/title_activity_map" >
         </activity>
         <activity
-            android:name=".DriverRoute"
+            android:name="com.yahoo.android.yopool.activity.DriverRoute"
             android:label="@string/title_activity_driver_route" >
         </activity>
         <activity
-            android:name=".SigninActivity"
+            android:name="com.yahoo.android.yopool.activity.SigninActivity"
             android:label="@string/sign_in_activity_title" >
         </activity>
         <activity
-            android:name=".ProfileActivity"
+            android:name="com.yahoo.android.yopool.activity.ProfileActivity"
             android:label="@string/title_activity_profile" >
         </activity>
         <activity
-            android:name=".ListActivity"
+            android:name="com.yahoo.android.yopool.activity.ListActivity"
             android:label="@string/title_activity_list" >
         </activity>
         <activity
-            android:name=".DriverDialogFragment"
+            android:name="com.yahoo.android.yopool.activity.DriverDialogFragment"
             android:label="@string/title_activity_driverdialog"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
         <activity
-            android:name=".DriverList"
+            android:name="com.yahoo.android.yopool.activity.DriverList"
             android:label="@string/title_activity_driver_list" >
         </activity>
         <activity
-            android:name=".DriverDetails"
+            android:name="com.yahoo.android.yopool.activity.DriverDetails"
             android:label="@string/title_activity_driver_details" >
         </activity>
         <activity
-            android:name=".DriverDashboard"
+            android:name="com.yahoo.android.yopool.activity.DriverDashboard"
             android:label="@string/title_activity_driver_dashboard" >
         </activity>
         <activity
-            android:name=".PassengerList"
+            android:name="com.yahoo.android.yopool.activity.PassengerList"
             android:label="@string/title_activity_passenger_list" >
         </activity>
+        <activity
+            android:name="com.yahoo.android.yopool.activity.DriverReadyAlarmDialog"
+            android:theme="@android:style/Theme.Dialog" >
+        </activity>
+
+        <receiver android:name="com.yahoo.android.yopool.time.DriverReadyAlarmReceiver" >
+        </receiver>
+        <receiver
+            android:name="com.yahoo.android.yopool.time.BootReceiver"
+            android:enabled="false" >
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" >
+                </action>
+            </intent-filter>
+        </receiver>
     </application>
 
 </manifest>

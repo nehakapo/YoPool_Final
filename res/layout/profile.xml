@@ -4,7 +4,7 @@
     android:layout_height="fill_parent"
     android:background="@color/LightPurple"
     android:padding="5dp"
-    tools:context="com.yahoo.android.yopool.ProfileActivity" >
+    tools:context="com.yahoo.android.yopool.activity.ProfileActivity" >
 
     <LinearLayout
         android:id="@+id/linearLayoutDriver"

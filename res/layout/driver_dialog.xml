@@ -13,7 +13,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="10dp"
-        android:text="@string/display_message"
+        android:text="@string/driver_ready_title"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/DarkPurple"
         android:textStyle="bold" />

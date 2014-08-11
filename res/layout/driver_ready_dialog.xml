@@ -1,0 +1,78 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/clock_bck"
+    android:orientation="vertical"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/textView1"
+        style="@style/textStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/driver_ready_title"
+        android:textColor="@color/White"
+        android:textSize="22sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textView2"
+        style="@style/textStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="10dp"
+        android:text="@string/at"
+        android:textColor="@color/White"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TimePicker
+        android:id="@+id/timePicker1"
+        android:layout_width="235dp"
+        android:layout_height="129dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp" >
+
+        <Button
+            android:id="@+id/button1"
+            style="@style/btnStyle"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_bckground"
+            android:text="@string/confirm" />
+
+        <Button
+            android:id="@+id/button2"
+            style="@style/btnStyle"
+            android:layout_width="80dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_bckground"
+            android:text="@string/snooze" />
+
+        <Button
+            android:id="@+id/button3"
+            style="@style/btnStyle"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="10dp"
+            android:background="@drawable/btn_bckground"
+            android:text="@string/not_today" />
+
+    </LinearLayout>
+
+</LinearLayout>

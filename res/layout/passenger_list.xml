@@ -4,7 +4,7 @@
     android:layout_height="match_parent"
     android:background="@color/LightPurple"
     android:padding="5dp"
-    tools:context="com.example.yopool.PassengerList" >
+    tools:context="com.yahoo.android.yopool.activity.PassengerList" >
 
     <LinearLayout
         android:id="@+id/linearLayoutDriver"
