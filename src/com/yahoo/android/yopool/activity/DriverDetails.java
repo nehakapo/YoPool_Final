@@ -61,7 +61,7 @@ public class DriverDetails extends Activity {
 			Toast.LENGTH_LONG).show();
 			} catch (Exception e) {
 			Toast.makeText(getApplicationContext(),
-			"SMS failed, please try again later!",
+			"SMS failed! Please try again later!",
 			Toast.LENGTH_LONG).show();
 			e.printStackTrace();
 			}
